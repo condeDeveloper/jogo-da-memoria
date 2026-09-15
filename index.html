@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Jogo da Memória</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>Jogo da Memória</h1>
+      <nav class="levels" id="levels">
+        <button data-level="easy" class="active">Fácil</button>
+        <button data-level="medium">Médio</button>
+        <button data-level="hard">Difícil</button>
+      </nav>
+      <nav class="themes" id="themes">
+        <button data-theme="animals" class="active">🐶 Animais</button>
+        <button data-theme="food">🍕 Comida</button>
+        <button data-theme="space">🚀 Espaço</button>
+      </nav>
+    </header>
+
+    <section class="stats">
+      <div><span>Jogadas</span><strong id="moves">0</strong></div>
+      <div><span>Tempo</span><strong id="time">0s</strong></div>
+      <div><span>Pares</span><strong id="pairs">0/0</strong></div>
+      <button id="restart">↻ Reiniciar</button>
+    </section>
+
+    <section class="board" id="board"></section>
+
+    <p class="best" id="best"></p>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="card-win">
+        <h2>🎉 Parabéns!</h2>
+        <p id="summary"></p>
+        <p id="record"></p>
+        <button id="again">Jogar de novo</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/deck.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
